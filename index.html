@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script> // nessa tag é possível utilizar comandos em javascript
+        /**
+     * -> Tipos primitivos
+     * -> Variáveis do Javascript
+     * -> Operadores Matemáticos do Javascript
+     */
+
+        //serve para escrever mensagens no console
+
+        // string → textos
+        // number → números
+        // boolean → booleano (true or false)
+
+        console.log("Hello world")
+        console.log(5)
+        console.log(43.76)
+        console.log(true)
+        console.log(false)
+
+        // variáveis
+        let mensagem = "Eu gosto de batata" // declaração de variável
+
+        console.log(mensagem) //printa o valor da variável (no caso é uma string)
+
+        mensagem = "Mensagem nova" // atribui novo valor a variável mensagem
+
+        console.log(mensagem) //printa o novo valor da variável
+
+        const pi = 3.1415 //declaração de constante
+
+        console.log(pi) //printa o valor da constante
+
+        //pi=5 → se eu tentar mudar o valor de uma const, vai dar erro e parar o código
+        //let 54nomes (errado) → uma variável não pode iniciar seu nome com números
+        //let cabeça ou let cão (errado) → o JS não tem problema com caracteres especiais como o ç ou ã, mas outras linguagens podem acusar como erro
+        
+        //camel case
+        const nomeDeUsuario = "PettBR"
+        //snake case
+        const nome_de_usuario = "PettBR"
+
+        let idade = 18
+        console.log(idade)
+        //let idade = 30 → não pode pois está declarando uma variável já existente
+        // var idade = 30 → a princípio seria possível sobrescever com o mesmo nome (embora o meu tenha dado erro)
+
+        const a = 6
+        const b = a
+        console.log(a)
+        console.log(b)
+
+        //Soma +
+        const soma = 5 + 78.46
+        console.log(soma)
+        console.log(7+8+0.345)
+        const soma2 = soma + 3
+        console.log(soma2)
+        //bizarrices do JavaScrip hu3hu3:
+        console.log("45"- 5) // ele tenta fazer a conta considerando a string 45 como um número: cospe 40
+        console.log("45"+ 5) //concatenação: cospe 455
+
+        //Subtração -
+        console.log(20-10)
+        console.log(20 - 5 - 3)
+        console.log(40-3.4+2) //cospe 37.6
+
+        //Multiplicação *
+        let multi = soma2 * 4
+        console.log(multi)
+
+        //divisão /
+        let div = 20 / 4
+        console.log(div)
+        console.log(5+3*2/2-4) // segue a prioridade da matemática
+        console.log(5+3*2/(2-4)) //parenteses pra mudar a prioridade
+        //resto
+
+        //potenciação
+
+
+    </script>
+</body>
+
+</html>
