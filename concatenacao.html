@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const nomeUsuario = prompt(`Olá usuário, qual o seu nome?`);
+        const idadeUsuario = parseInt(prompt(`Qual a sua idade?`));
+
+// alert("Então o seu nome é " + nomeUsuario + " e você tem " + idadeUsuario + " anos");
+// Template String
+
+
+// O comando ${} permite executar qualquer comando JS dentro da string com crase ``
+alert(`Então o seu nome é ${nomeUsuario} e sua idade é ${idadeUsuario}`);
+
+//Concatenação e prioridade dos ()
+console.log('Olá, minha idade é ' + 20 + 5) //olá minha idade é 205
+console.log('Olá, minha idade é ' + (20 + 5)) //olá minha idade é 25
+    
+
+    </script>
+
+</body>
+</html>
