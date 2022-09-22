@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    /* Crie um algoritmo para ler N números, some-os e faça a média entre os números */
+    let quantidadeNumeros = parseInt(prompt(`Digite a quantidade de números.`)); //3
+    while(isNaN(quantidadeNumeros) || quantidadeNumeros <= 0){
+alert("Valor digitado é inválido. Digite um número inteiro positivo e diferente de 0.")
+quantidadeNumeros = parseInt(prompt(`Digite a quantidade de números.`));
+    }
+
+
+
+
+    let soma = 0
+    let media = 0
+    
+    for (let i = 1; i <= quantidadeNumeros ; i++) {
+        num = parseFloat(prompt(`Digite um valor.`));  
+        while(isNaN(num)){
+alert("Valor digitado é inválido. Digite um número.")
+num = parseFloat(prompt(`Digite um número.`));
+    } 
+        soma = soma + num;
+        media = (soma / i);
+        
+    }
+    alert(`O valor da soma de todos os números é ${soma} e a média é ${media}`)
+    
+
+    </script>
+</body>
+</html>
