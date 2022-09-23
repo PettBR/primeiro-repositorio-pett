@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2</title>
+</head>
+<body>
+    <script>
+        /*
+        Crie um programa que pergunte quantos produtos um cliente pegou e depois peça para que ele informe o preço de cada produto. Ao recuperar possuir o valor de cada produto, faça a soma total da compra e informe o maior e o menor preço que foi informado.
+        */
+
+// recuperar a quantidade de produtos
+        const qtdProdutos = parseInt(prompt('Informe a quantidade de produtos'));
+// ler o preço de cada produto e armazenar em um array
+const precosProdutos =[];
+for (let i = 0; i < qtdProdutos; i++){
+    let preco = parseFloat(prompt('Informe o valor do produto ' + (i + 1)));
+    precosProdutos[i] = preco;
+    console.log(precosProdutos);
+    document.write(`<p> O preço do produto ${(i+1)} é: ${precosProdutos[i]} </p>`);
+};
+
+let soma = 0;
+
+/* Método com laço for */
+// for(let i = 0; i < precosProdutos.length; i++){
+// const valor = precosProdutos[i];
+// //soma = soma + valor; é euivalente a:
+// soma += valor
+// }
+/* Método com laço for of */
+// for (let preco of precosProdutos){
+//     soma += preco;
+// };
+
+/* Fazendo o teste de maior/menor dentro do laço */
+let testeMaior = 0
+let testeMenor = Infinity // também poderia ser let testeMenor = Number.MAX_VALUE
+
+for (let preco of precosProdutos){
+    soma += preco;
+    if(preco > testeMaior){
+        testeMaior = preco;
+    }
+    if(preco < testeMenor){
+        testeMenor = preco
+    }
+};
+
+
+alert(`O preço final a pagar é ${soma}`);
+document.write(`<p> O preço final da compra é: ${soma} </p>`);
+document.write(`<p> O menor preço é: ${testeMenor} e o maior preço é: ${testeMaior} </p>`);
+
+    </script>
+</body>
+</html>
