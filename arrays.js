@@ -35,3 +35,18 @@ console.log(arr[6]); // Texto novo
 console.log(arr[8]); // Undefined
 arr[8] = 'Agora a posição 8 existe dentro de arr'
 console.log(arr);
+
+const lista = ['João', 'Maria', 'Paulo', 'Pedro', 'Vitória', 'Augusto', 'Fábio', 'Larissa'];
+console.log(lista);
+lista.push('Roberto') // adicionar um valor no final do array
+console.log(lista);
+lista.unshift('Gustavo'); // remove o último valor do array
+console.log(lista);
+lista.pop(); //remove o último valor de um array
+console.log(lista);
+lista.shift(); // remove o primeiro valor de um array
+console.log(lista);
+console.log(lista.concat('Júlio')); // gera uma nova referência e adiciona o novo valor no final dela
+console.log(lista);
+console.log(lista.join('→')); // gera uma nova referência e adiciona o novo valor no final dela
+console.log(lista);
