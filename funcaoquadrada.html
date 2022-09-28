@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+ * Criem uma função que gera o resultado de uma equação do segundo grau
+ * 
+ * ax² + bx + c = 0
+ * 
+ * delta = b² - 4ac
+ * raízes = -b +- raíz de delta / 2a
+ * Testar (a = 1 b=-1 c=-12) → x1 = 4 e x2 = -3
+ */ 
+function equacaoSegundoGrau(a, b, c){
+const delta = b ** 2 - (4 * a * c);
+if (delta < 0){
+    return document.write(`Delta é negativo e as raízes estão no conjunto imaginário`);
+} else if(delta == 0){
+    raiz1 = (-b + Math.sqrt(delta))/(2 * a);
+    return [raiz1];
+} else{
+raiz1 = (-b + Math.sqrt(delta))/(2 * a);
+raiz2 = (-b - Math.sqrt(delta))/(2 * a);
+return [raiz1,raiz2];
+}
+}
+
+let A = parseFloat(prompt('Insira o valor de A'));
+let B = parseFloat(prompt('Insira o valor de B'));
+let C = parseFloat(prompt('Insira o valor de C'));
+
+equacaoSegundoGrau(A,B,C);
+console.log(raiz1,raiz2)
+document.write(`A primeira raiz é ${raiz1} e a segunda raiz é ${raiz2}`)
+
+    </script>
+</body>
+</html>
